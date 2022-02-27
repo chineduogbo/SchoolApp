@@ -53,7 +53,7 @@ namespace SchoolAppForUcheApi
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "SchoolAppForUcheApi v1"));
             }
-            UpdateDatabase(app);
+           // UpdateDatabase(app);
             app.UseHttpsRedirection();
 
             app.UseRouting();
