@@ -22,8 +22,12 @@
     </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
-	<Target Name="PrePublishTarget" AfterTargets="Publish">
+	<!--<Target Name="PrePublishTarget" AfterTargets="Publish">
 		<Exec Command="dotnet ef database update" />
+	</Target>-->
+	<Target Name="PrePublishTarget" AfterTargets="Publish">
+		<Exec Command="echo  &quot;Migrating Database ...&quot;" />
+		<Exec Command="dotnet-ef database update"/>
 	</Target>
   <ItemGroup>
     <Folder Include="Images\" />
